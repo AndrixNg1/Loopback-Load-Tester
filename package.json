@@ -1,0 +1,14 @@
+{
+  "name": "localhost-api-load-tester",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Bounded localhost-only load tester for observing the behavior of another local API.",
+  "main": "attack.js",
+  "scripts": {
+    "attack": "node attack.js"
+  },
+  "dependencies": {
+    "autocannon": "^8.0.0",
+    "dotenv": "^17.3.1"
+  }
+}
