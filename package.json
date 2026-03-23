@@ -1,8 +1,9 @@
 {
-  "name": "localhost-api-load-tester",
-  "version": "1.1.0",
+  "name": "loopback-load-tester",
+  "version": "1.0.0",
   "private": true,
-  "description": "Bounded localhost-only load tester for observing the behavior of another local API.",
+  "license": "MIT",
+  "description": "Localhost-only load tester for observing how another local API behaves under bounded request pressure.",
   "main": "attack.js",
   "scripts": {
     "attack": "node attack.js"
