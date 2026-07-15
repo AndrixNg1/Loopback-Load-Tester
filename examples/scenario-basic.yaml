@@ -1,0 +1,8 @@
+name: "Basic API Test"
+routes:
+  - method: GET
+    path: /
+    weight: 1
+  - method: GET
+    path: /api/v1/status
+    weight: 2
