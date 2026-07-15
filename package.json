@@ -1,15 +1,47 @@
 {
   "name": "loopback-load-tester",
-  "version": "1.0.0",
-  "private": true,
+  "version": "2.0.0",
   "license": "MIT",
-  "description": "Localhost-only load tester for observing how another local API behaves under bounded request pressure.",
-  "main": "attack.js",
-  "scripts": {
-    "attack": "node attack.js"
+  "description": "A focused local and distributed HTTP load-testing CLI.",
+  "main": "src/cli.js",
+  "bin": {
+    "loopback-load": "src/cli.js"
   },
+  "files": [
+    "src/",
+    "examples/",
+    "attack.js",
+    ".env.example",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "worker": "node src/worker-entry.js",
+    "attack": "node src/cli.js",
+    "test": "node --test",
+    "check": "node --check src/cli.js && node --test",
+    "test:local": "node src/cli.js run"
+  },
+  "keywords": [
+    "load-testing",
+    "performance",
+    "cli",
+    "distributed"
+  ],
   "dependencies": {
-    "autocannon": "^8.0.0",
-    "dotenv": "^17.3.1"
+    "chalk": "^4.1.2",
+    "cli-progress": "^3.12.0",
+    "commander": "^11.1.0",
+    "dotenv": "^17.3.1",
+    "fastify": "^5.10.0",
+    "js-yaml": "^4.3.0",
+    "json-stable-stringify": "^1.1.1",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "undici": "^6.27.0"
   }
 }
