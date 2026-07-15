@@ -1,0 +1,16 @@
+name: "API Auth Flow Scenario"
+routes:
+  - method: GET
+    path: /api/v1/health
+    weight: 1
+  - method: POST
+    path: /api/v1/login
+    weight: 3
+    body: '{"username": "admin", "password": "password123"}'
+    headers:
+      Content-Type: "application/json"
+  - method: GET
+    path: /api/v1/profile
+    weight: 2
+    headers:
+      Authorization: "Bearer replace-me"
